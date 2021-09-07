@@ -31,6 +31,7 @@ namespace Parcial1
         {
             this.lblSold = new System.Windows.Forms.Label();
             this.rtxtVentas = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSold
@@ -47,15 +48,27 @@ namespace Parcial1
             // 
             this.rtxtVentas.Location = new System.Drawing.Point(55, 54);
             this.rtxtVentas.Name = "rtxtVentas";
-            this.rtxtVentas.Size = new System.Drawing.Size(690, 273);
+            this.rtxtVentas.Size = new System.Drawing.Size(212, 273);
             this.rtxtVentas.TabIndex = 1;
             this.rtxtVentas.Text = "";
+            this.rtxtVentas.TextChanged += new System.EventHandler(this.rtxtVentas_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.503F);
+            this.label1.Location = new System.Drawing.Point(394, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "BIENVENIDO A LA SECCION DE ADMINISTRADORA";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rtxtVentas);
             this.Controls.Add(this.lblSold);
             this.Name = "Form2";
@@ -69,5 +82,6 @@ namespace Parcial1
 
         private System.Windows.Forms.Label lblSold;
         private System.Windows.Forms.RichTextBox rtxtVentas;
+        private System.Windows.Forms.Label label1;
     }
 }

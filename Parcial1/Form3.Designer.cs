@@ -33,13 +33,15 @@ namespace Parcial1
             this.cboxAliñado = new System.Windows.Forms.CheckBox();
             this.cboxNoaliñado = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNam1 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBuy = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnPass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblType
@@ -60,6 +62,9 @@ namespace Parcial1
             this.cboxAliñado.TabIndex = 1;
             this.cboxAliñado.Text = "Pan Aliñado";
             this.cboxAliñado.UseVisualStyleBackColor = true;
+            this.cboxAliñado.CheckedChanged += new System.EventHandler(this.cboxAliñado_CheckedChanged);
+            this.cboxAliñado.CheckStateChanged += new System.EventHandler(this.cboxAliñado_CheckStateChanged);
+            this.cboxAliñado.Click += new System.EventHandler(this.cboxAliñado_CheckedChanged);
             // 
             // cboxNoaliñado
             // 
@@ -70,6 +75,7 @@ namespace Parcial1
             this.cboxNoaliñado.TabIndex = 2;
             this.cboxNoaliñado.Text = "Pan no Aliñado";
             this.cboxNoaliñado.UseVisualStyleBackColor = true;
+            this.cboxNoaliñado.CheckedChanged += new System.EventHandler(this.cboxNoaliñado_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -80,27 +86,31 @@ namespace Parcial1
             this.checkBox3.TabIndex = 3;
             this.checkBox3.Text = "Pan especial";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // textBox1
+            // txtNam1
             // 
-            this.textBox1.Location = new System.Drawing.Point(297, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNam1.Location = new System.Drawing.Point(297, 88);
+            this.txtNam1.Name = "txtNam1";
+            this.txtNam1.Size = new System.Drawing.Size(207, 20);
+            this.txtNam1.TabIndex = 4;
+            this.txtNam1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtId
             // 
-            this.textBox2.Location = new System.Drawing.Point(297, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtId.Location = new System.Drawing.Point(297, 141);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(207, 20);
+            this.txtId.TabIndex = 5;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
-            // textBox3
+            // txtQuantity
             // 
-            this.textBox3.Location = new System.Drawing.Point(297, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtQuantity.Location = new System.Drawing.Point(297, 190);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantity.TabIndex = 6;
+            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // label1
             // 
@@ -132,25 +142,46 @@ namespace Parcial1
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(297, 244);
+            this.btnBuy.Location = new System.Drawing.Point(297, 225);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(138, 23);
             this.btnBuy.TabIndex = 10;
             this.btnBuy.Text = "Registrar compra";
             this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(556, 56);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(196, 211);
+            this.richTextBox1.TabIndex = 11;
+            this.richTextBox1.Text = "";
+            // 
+            // btnPass
+            // 
+            this.btnPass.Location = new System.Drawing.Point(297, 269);
+            this.btnPass.Name = "btnPass";
+            this.btnPass.Size = new System.Drawing.Size(138, 23);
+            this.btnPass.TabIndex = 12;
+            this.btnPass.Text = "Pasar compra";
+            this.btnPass.UseVisualStyleBackColor = true;
+            this.btnPass.Click += new System.EventHandler(this.btnPass_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPass);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.txtNam1);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.cboxNoaliñado);
             this.Controls.Add(this.cboxAliñado);
@@ -168,12 +199,14 @@ namespace Parcial1
         private System.Windows.Forms.CheckBox cboxAliñado;
         private System.Windows.Forms.CheckBox cboxNoaliñado;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNam1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBuy;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnPass;
     }
 }

@@ -16,5 +16,10 @@ namespace Parcial1
         {
             InitializeComponent();
         }
+
+        private void rtxtVentas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
