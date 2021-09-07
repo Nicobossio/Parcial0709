@@ -58,7 +58,11 @@ namespace Parcial1
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-          
+            rtxtContainer.Text = txtName.Text + "-" +  txtPassword.Text;
+            txtName.Clear();
+            txtPassword.Clear();
+
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
