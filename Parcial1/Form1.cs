@@ -49,7 +49,11 @@ namespace Parcial1
             txtName.Clear();
             txtPassword.Clear();
 
+
         }
+
+
+
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
@@ -73,6 +77,24 @@ namespace Parcial1
         private void rtxtContainer_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+           
+            if (this.txtName.Text == "User" && this.txtPassword.Text == "User42")
+            {
+                Form3 llamar = new Form3();
+                llamar.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrecta, revise si estan bien escritos");
+            }
+            rtxtContainer.Text = txtName.Text + "-" + txtPassword.Text;
+            txtName.Clear();
+            txtPassword.Clear();
         }
     }
     }

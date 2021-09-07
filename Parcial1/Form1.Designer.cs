@@ -37,6 +37,7 @@ namespace Parcial1
             this.label2 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.rtxtContainer = new System.Windows.Forms.RichTextBox();
+            this.btnUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtName
@@ -96,7 +97,7 @@ namespace Parcial1
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(163, 234);
+            this.btnRegister.Location = new System.Drawing.Point(134, 234);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(78, 23);
             this.btnRegister.TabIndex = 7;
@@ -113,11 +114,22 @@ namespace Parcial1
             this.rtxtContainer.Text = "";
             this.rtxtContainer.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
+            // btnUser
+            // 
+            this.btnUser.Location = new System.Drawing.Point(38, 274);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(141, 23);
+            this.btnUser.TabIndex = 9;
+            this.btnUser.Text = "Ingresar Usuario";
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 321);
+            this.Controls.Add(this.btnUser);
             this.Controls.Add(this.rtxtContainer);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label2);
@@ -144,6 +156,7 @@ namespace Parcial1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.RichTextBox rtxtContainer;
+        private System.Windows.Forms.Button btnUser;
     }
 }
 

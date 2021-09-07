@@ -39,6 +39,7 @@ namespace Parcial1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblType
@@ -129,11 +130,21 @@ namespace Parcial1
             this.label3.TabIndex = 9;
             this.label3.Text = "Cantidad de panes";
             // 
+            // btnBuy
+            // 
+            this.btnBuy.Location = new System.Drawing.Point(297, 244);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(138, 23);
+            this.btnBuy.TabIndex = 10;
+            this.btnBuy.Text = "Registrar compra";
+            this.btnBuy.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -163,5 +174,6 @@ namespace Parcial1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnBuy;
     }
 }
